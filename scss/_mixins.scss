@@ -1,0 +1,8 @@
+
+@mixin flex-direc-center($direc){
+    display: flex;
+    flex-direction:$direc;
+    align-items: center;
+    justify-content: center;
+    
+}

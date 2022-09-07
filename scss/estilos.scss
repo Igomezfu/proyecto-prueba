@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2? family= Barlow:wght@200 & family= Nunito+Sans:ital,wght@1,200 & display=swap');
+@import "_variables.scss";
+@import "mixins.scss";
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.pantalla{
+    background-image:url(../images/fondodefinitivo.png);
+}
+
+
+.arriba{
+    font-weight: bolder;
+    font-size: 100%;
+    font-family: $sizesecun;
+    padding: 1em;}
+    .subtitulos{
+        font-weight: bolder;
+        text-align: center;
+        text-decoration: none;
+        color: $colorencabezados;
+}
+.imagen-inicio{
+    @include flex-direc-center(row);
+    padding: 10px;}
+    .imagenBb{
+        width: 30%;
+    }
+
+h1{
+    font-size: 500%;
+    font-weight: bolder;
+    font-family: $sizeprin;
+    text-align: center;
+    color:map-get($estilos, titulo);
+    padding:map-get($estilos, padding);}
+    .titulo{ 
+        font-size: 500%;
+        font-weight: bolder;
+        margin-top: 1%;
+        margin-bottom:1%;}
+
+.subtitulos{
+    font-weight: bolder;
+    font-size: 200%;
+    font-family: $sizeprin;
+    text-align: center;
+    color:$sizeprin;
+    text-decoration: none;
+    padding: map-get($estilos, padding);
+
+}
+h2{
+    font-size: 200%;
+    font-family:$sizeprin;
+    font-weight: bolder;
+    text-align: center;
+    color:$colorencabezados;
+    margin-top: 5%;
+    margin-bottom: 5%;}
+    .subtitulos2{
+        font-weight: bolder;
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+}
+h3{
+    font-weight: bolder;
+    font-size: 200%;
+    font-family: $sizeprin;
+    text-align: center;
+    color:$colorencabezados;
+}  
+.primerParrafo{
+    font-style: normal;
+    font-size: 250%;
+    font-family: $sizesecun;
+    text-align: center;
+    font-weight: bolder;
+    color:$colorparrafo;
+    padding: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.formula{
+    font-size: 140%;
+    font-family: $sizesecun;
+    text-align: center;
+    border:solid;
+    border-color: black;
+    height: auto;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-image: $backgrounprimary;
+    padding: map-get($estilos, padding);
+}
+
+.formulario{
+    @extend .formula;
+    font-weight: bolder;
+    width: 50%; 
+    padding: 10px;
+}
+.arriba{
+    font-weight: bolder;
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color:$colorencabezados;
+    padding: map-get($estilos, padding);
+}
+
+.productos{
+    @include flex-direc-center(row);}
+    .imgbebe{
+        width: 30%;
+        height: 30%}
+
+.imgEstilos{  
+    padding: 1%;
+    gap:30px;
+    width: 100%;
+    @include flex-direc-center(column);
+}
+.grid2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto; 
+}
+.redes{
+    width: auto;
+    height: auto;
+}
+.zoom:hover{
+    transform: scale(2);
+    transition: all 2s;
+}
+.imgGrande {
+    width : 500px ;
+    height : 400px ;
+}
+.imgProductos{
+    width : 450px ;
+    height : 300px ;
+}
+.centrado{
+    
+    @include flex-direc-center(row); 
+}
+.redes{
+    @include flex-direc-center(row);
+    width: 80px;
+    margin: 2% 2%;  
+}
+.grid3{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 60% 40%;
+}
+.grid1{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+@media  (max-width:600px){    
+    .arriba{
+        font-size: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content:right;
+    }
+    .titulo{
+        font-size:180%;
+    }
+    h2{
+        font-size: 110%;
+    }
+    .subtitulos2{
+        font-size: 100%
+    }
+    .primerParrafo{
+        font-size:100%;
+        padding: auto;
+        margin: auto;
+    }
+    .formula{
+        font-size: 80%;
+        width: 60%;
+    }
+    .subtitulos{
+        font-size: 140%;
+    }
+    h3 {
+         font-size: 90% 
+        }  
+    .imgGrande {
+        width : 300px ;
+        height : 200px ;
+    }
+    .mapa{
+        width : 300px ;
+        height : 200px ;
+    }
+    .redes{
+        width: 40px ;
+    }
+    .desborde {
+        width : 100% ;
+        height : 30% ;
+    }
+    .grid3{
+        @include flex-direc-center(column)
+    }
+    .imagen-inicio {
+        width :  100% ;
+        height :  auto;}
+    .imgProductos {
+        width : 200px ;
+        height : 150px;
+    }
+    .grid2{
+        @include flex-direc-center(column)
+    }
+    .grid1{
+        @include flex-direc-center(column)
+    }
+
+}
+@media (min-width:601px) and (max-width:1068px){
+
+    .arriba{
+        font-size: 80%;
+    }
+
+    .titulo{
+        font-size:300%;
+    }
+    h2{
+        font-size: 130%;
+    }
+    .subtitulos2{
+        font-size: 130%
+    }
+    .primerParrafo{
+        font-size:120%;
+        padding: auto;
+        margin: auto;
+    }
+    .formula{
+        font-size: 70%;
+        width: 50%;
+    }
+    .subtitulos{
+        font-size: 170%;
+    }
+    h3 { 
+        font-size: 120%
+    }  
+    .imgGrande {
+        width : 400px ;
+        height : 300px ;
+    }
+    .redes{
+        width: 85px ;
+    }
+    .desborde {
+        width : 100% ;
+        height : 40% ;
+    }
+    .grid3{
+        @include flex-direc-center(column)
+    }
+    .imagen-inicio{
+        width: 100%;
+        height: 70%;
+    }
+    .imgProductos {
+        width : 250px ;
+        height : 175px;
+    }
+    .grid2{
+        @include flex-direc-center(column)
+    }
+    .grid1{
+        @include flex-direc-center(column)
+    }
+
+}
